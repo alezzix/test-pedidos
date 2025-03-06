@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "4468e2b3-0b76-49e2-ab88-c5f98cb2ed32",
+		"name": "pedidos-teste",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5686745"
+	},
+	"item": [
+		{
+			"name": "criar-pedido",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"pedidoId\":1,\r\n   \"clienteId\":1,\r\n   \"itens\":[\r\n      {\r\n         \"produtoId\":1,\r\n         \"quantidade\":2,\r\n         \"valor\":52.70\r\n      }\r\n   ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/pedidos/criar-pedido",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"pedidos",
+						"criar-pedido"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "busca-por-id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n {\r\n        \"bid\": \"0.5\",\r\n        \"name\": \"fffff\"\r\n    },\r\n    \r\n    {\r\n        \"bid\": \"0.01\",\r\n        \"name\": \"João\"\r\n    },\r\n    {\r\n        \"bid\": \"0.3\",\r\n        \"name\": \"Maria\"\r\n    },\r\n     {\r\n        \"bid\": \"0.01\",\r\n        \"name\": \"Renata\"\r\n    },\r\n     {\r\n        \"bid\": \"12.34\",\r\n        \"name\": \"Pedro\"\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/pedidos/get-by-id?idPedido=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"pedidos",
+						"get-by-id"
+					],
+					"query": [
+						{
+							"key": "idPedido",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "busca-por-status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n {\r\n        \"bid\": \"0.5\",\r\n        \"name\": \"fffff\"\r\n    },\r\n    \r\n    {\r\n        \"bid\": \"0.01\",\r\n        \"name\": \"João\"\r\n    },\r\n    {\r\n        \"bid\": \"0.3\",\r\n        \"name\": \"Maria\"\r\n    },\r\n     {\r\n        \"bid\": \"0.01\",\r\n        \"name\": \"Renata\"\r\n    },\r\n     {\r\n        \"bid\": \"12.34\",\r\n        \"name\": \"Pedro\"\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/pedidos/get-by-status?status=Criado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"pedidos",
+						"get-by-status"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "Criado"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
