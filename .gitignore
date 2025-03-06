@@ -1,0 +1,40 @@
+*target*
+*.jar
+*.war
+*.ear
+*.class
+*.jtl
+*.log
+.DS_Store
+money-api/.idea/
+
+# eclipse specific git ignore
+*.pydevproject
+.project
+.metadata
+bin/**
+obj/**
+tmp/**
+tmp/**/*
+function/**
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+logs/**
+*logs*
+
+# External tool builders
+.externalToolBuilders/
+
+# Locall
+
+# IntelliJ IDEA
+.DS_Store
+.idea
+
+/bin/
